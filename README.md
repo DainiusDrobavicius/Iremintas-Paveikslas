@@ -1,5 +1,5 @@
 # Iremintas-Paveikslas
-Programa sukurianti paveiksla su pasisveikinimu
+Programa sukurianti paveikslą su pasisveikinimu
 
 Įrašykite savo vardą ir programa sukurs pasisveikinima jums.
 
