@@ -6,8 +6,8 @@ int main()
 {
     string vardas;
     string lytis;
+    int eilutes;
     int ilgis;
-    string eilute3;
     bool teisinga = true;
     cout << "Koks jusu vardas? ";
     cin >> vardas;
@@ -17,14 +17,74 @@ int main()
         cin >> lytis;
         if (lytis == "Vyras")
         {
+            cout << "Kiek eiluciu norite tarp pasisveikinimo? ";
+            cin >> eilutes;
             ilgis = vardas.length() + 14;
-            eilute3 = "* Sveikas, " + vardas + "! *";
+            for (int i = 0; i < ilgis; i++)
+            {
+                cout << '*';
+            }
+            cout << endl;
+            for (int i = 0; i < eilutes; i++)
+            {
+                cout << '*';
+                for (int j = 0; j < ilgis - 2; j++)
+                {
+                    cout << ' ';
+                }
+                cout << '*' << endl;
+            }
+
+            cout << "* Sveikas, " + vardas + "! *" << endl;
+            for (int i = 0; i < eilutes; i++)
+            {
+                cout << '*';
+                for (int j = 0; j < ilgis - 2; j++)
+                {
+                    cout << ' ';
+                }
+                cout << '*' << endl;
+            }
+            for (int i = 0; i < ilgis; i++)
+            {
+                cout << '*';
+            }
             teisinga = false;
         }
         else if (lytis == "Moteris")
         {
+            cout << "Kiek eiluciu norite tarp pasisveikinimo? ";
+            cin >> eilutes;
             ilgis = vardas.length() + 13;
-            eilute3 = "* Sveika, " + vardas + "! *";
+            for (int i = 0; i < ilgis; i++)
+            {
+                cout << '*';
+            }
+            cout << endl;
+            for (int i = 0; i < eilutes; i++)
+            {
+                cout << '*';
+                for (int j = 0; j < ilgis - 2; j++)
+                {
+                    cout << ' ';
+                }
+                cout << '*' << endl;
+            }
+
+            cout << "* Sveika, " + vardas + "! *" << endl;
+            for (int i = 0; i < eilutes; i++)
+            {
+                cout << '*';
+                for (int j = 0; j < ilgis - 2; j++)
+                {
+                    cout << ' ';
+                }
+                cout << '*' << endl;
+            }
+            for (int i = 0; i < ilgis; i++)
+            {
+                cout << '*';
+            }
             teisinga = false;
         }
         else
@@ -32,16 +92,5 @@ int main()
             cout << "Ivedete bloga lyti..." << endl;
         }
     }
-
-    string eilute1(ilgis, '*');
-    string eilute2(ilgis, ' ');
-    eilute2[0] = '*';
-    eilute2[eilute2.length() - 1] = '*';
-
-    cout << eilute1 << endl;
-    cout << eilute2 << endl;
-    cout << eilute3 << endl;
-    cout << eilute2 << endl;
-    cout << eilute1 << endl;
     return 0;
 }
